@@ -1,1 +1,17 @@
-<h1>Bienvenue sur la page d'accueil de prostage !</h1>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1>Bienvenue sur la page d accueil de prostage !</h1>
+    <ul>
+        <li>
+            <a href="{{ path('prostages_stages',{id:5})}}">Stages</a>
+        </li>
+        <li>
+            <a href="{{ path('prostages_formations')}}">Formations</a>
+        </li>
+        <li>
+            <a href="{{ path('prostages_entreprises')}}">Entreprises</a>
+        </li>
+    </ul>
+{% endblock %}
