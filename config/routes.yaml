@@ -1,3 +1,7 @@
 prostages_accueil:
-    path: /accueil
+    path: /
+    controller: App\Controller\ProStagesController::index
+
+prostages_entreprises:
+    path: /entreprises
     controller: App\Controller\ProStagesController::index
