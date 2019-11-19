@@ -4,4 +4,12 @@ prostages_accueil:
 
 prostages_entreprises:
     path: /entreprises
-    controller: App\Controller\ProStagesController::index
+    controller: App\Controller\ProStagesController::entreprises
+
+prostages_formations:
+    path: /formations
+    controller: App\Controller\ProStagesController::formations
+
+prostages_stages:
+    path: /stages/{id}
+    controller: App\Controller\ProStagesController::stages
