@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Prostages{% endblock %}</title>
-        {% block stylesheets %}<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">{% endblock %}
+        {% block stylesheets %}<link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">{% endblock %}
     </head>
 
 
@@ -30,15 +30,15 @@
 
             <div class="row"><!-- ligne 2 contenant les pages entreprises et formations -->
                 <div class="col-12">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <a class="navbar-brand" href="{{ path('prostages_accueil')}}">Accueil</a>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                        <a class="navbar-brand text-white" href="{{ path('prostages_accueil')}}">Accueil</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-item nav-link" href="{{ path('prostages_entreprises')}}">Entreprises</a>
-                                <a class="nav-item nav-link active" href="{{ path('prostages_formations')}}">Formations<span class="sr-only">(current)</span></a>
+                                <a class="nav-item nav-link text-white" href="{{ path('prostages_entreprises')}}">Entreprises</a>
+                                <a class="nav-item nav-link text-white" href="{{ path('prostages_formations')}}">Formations<span class="sr-only">(current)</span></a>
                             </div>
                         </div>
                     </nav>
@@ -106,7 +106,40 @@
                 <div class="row"><!-- ligne 4 contenant le pied de page -->
                     <div class="col-12">
                         <div class="alert alert-secondary bg-dark text-white" role="alert">
-                            Ce pied de page est FA-BU-LEUX!
+                            <div class="container">
+                                <div id="carouselContent" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active text-center">
+                                            <p>Ce pied de page est FA-BU-LEUX! - Ninja, 2016</p>
+                                        </div>
+                                        <div class="carousel-item text-center">  
+                                            <p>J'ai pu trouver un stage grâce à ce site internet ! MERCI ! - Pewdiepie, 2002</p>
+                                        </div>
+                                        <div class="carousel-item text-center">  
+                                            <p>😩😩😩😩 - Christopher 2019</p>
+                                        </div>
+                                        <div class="carousel-item text-center">  
+                                            <p>"Le design de ce site est tout bonnement incroyable" - Auteur inconnu, 1985</p>
+                                        </div>
+                                        <div class="carousel-item text-center">  
+                                            <p>"Une veritable source d'inspiration" - Charles Baudelaire, Aujourd'hui</p>
+                                        </div>
+                                        <div class="carousel-item text-center">  
+                                            <p>"Si seulement je savais créer un aussi beau site ..." - Elon Musk, -485 avant J.C à 16h45</p>
+                                        </div>
+                                        <div class="carousel-item text-center">  
+                                            <p>"Jamais l'humanite ne pourra faire mieux !" - Charles Darwin, 4 janvier 1927</p>
+                                        </div>
+                                        <div class="carousel-item text-center">  
+                                            <p>"SASUKEEE !!!!" - Naruto, tout le temps</p>
+                                        </div>
+                                        <div class="carousel-item text-center">  
+                                            <p>"Franchement pas ouf ce site" - Un mec pas trop sympa, Il y a 2 jours</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
