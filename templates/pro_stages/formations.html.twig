@@ -4,6 +4,11 @@
 
 {% block contenu %}
 
-<h1>Cette page affichera la liste des formations de l'IUT</h1>
+    <ul class="list-group">
+    {% for formation in formations %}
+        <li class="list-group-item"><a href='{{path('prostages_formation',{id:formation.id})}}'>{{ formation.nom }} - {{ formation.nomLong }}</a></li>
+
+    {% endfor %}
+    </ul>
 
 {% endblock %}

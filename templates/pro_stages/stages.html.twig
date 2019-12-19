@@ -1,9 +1,23 @@
 {% extends 'base.html.twig' %}
 
+
 {% block title %}Stages{% endblock %}
 
 {% block contenu %}
 
-<h1>Cette page affichera le descriptif du stage ayant pour identifiant {{idStage}}</h1>
+<div class="jumbotron">
+  <h1 class="display-4">{{stage.titre}}</h1>
+  <p class="lead">{{stage.description}}</p>
+  <hr class="my-4">
+  <p>Entreprise : {{stage.entreprise.nom}}</p>
+  <p>Mail : {{stage.mail}}</p>
+  <p>Formations : 
+  {% for formationCourante in stage.formations %}
+    {% if loop.last %}
+        {{ formationCourante.nom }}.
+    {% else %}
+        {{ formationCourante.nom }}, 
+    {% endif %}
+{% endfor %}</p>
 
 {% endblock %}  
