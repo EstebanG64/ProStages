@@ -34,7 +34,6 @@ class ProStagesController extends AbstractController
     }
     public function stages(Stage $stage)
     {
-
         return $this->render('pro_stages/stages.html.twig',
         ['stage'=>$stage]);
 
