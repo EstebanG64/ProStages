@@ -38,7 +38,7 @@ class AppFixtures extends Fixture
         
         //Création des entreprises
         $tabEntreprises = array();
-        for($i = 0; $i < 5 ; $i++)
+        for($i = 0; $i < 20 ; $i++)
         {
             $entreprise = new Entreprise();
             $nomEntr=$faker->company();
@@ -57,7 +57,7 @@ class AppFixtures extends Fixture
         foreach($tabEntreprises as $stageEntr)
         {
 
-            for ($i=0; $i < 3; $i++)
+            for ($i=0; $i < 10; $i++)
             {
                 $stage = new Stage();
                 $nbFormations = $faker->numberBetween(1,3); // Génération d'un nombre aléatoire pour définir le nombre de formations concernées apr le stage
