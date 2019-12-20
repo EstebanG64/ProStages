@@ -8,50 +8,47 @@ use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Stage;
 use App\Entity\Entreprise;
 use App\Entity\Formation;
+use App\Repository\StageRepository;
+use App\Repository\EntrepriseRepository;
+use App\Repository\FormationRepository;
 
 class ProStagesController extends AbstractController
 {
 
-    public function index()
+    public function index(StageRepository $repositoryStage)
     {
-        $repositoryStage = $this->getDoctrine()->getRepository(Stage::class);
         $stages=$repositoryStage->findall();
         return $this->render('pro_stages/index.html.twig',['stages'=>$stages]);
     }
-    public function entreprises()
+    public function entreprises(EntrepriseRepository $repositoryEntreprise)
     {
-        $repositoryEntreprise = $this->getDoctrine()->getRepository(Entreprise::class);
         $entreprises=$repositoryEntreprise->findall();
         return $this->render('pro_stages/entreprises.html.twig',['entreprises'=>$entreprises]);
 
     }
-    public function formations()
+    public function formations(FormationRepository $repositoryFormation)
     {
-        $repositoryFormation = $this->getDoctrine()->getRepository(Formation::class);
         $formations=$repositoryFormation->findall();
         return $this->render('pro_stages/formations.html.twig',['formations'=>$formations]);
 
     }
-    public function stages($id)
+    public function stages(Stage $stage)
     {
-        $repoStage = $this->getDoctrine()->getRepository(Stage::class);
-        $stage = $repoStage->find($id);
+
         return $this->render('pro_stages/stages.html.twig',
         ['stage'=>$stage]);
 
     }
-    public function entreprise($id)
+    public function entreprise(Entreprise $entreprise)
     {
-        $repoStage = $this->getDoctrine()->getRepository(Stage::class);
-        $stage = $repoStage->findByEntreprise($id);
+        
         return $this->render('pro_stages/entreprise.html.twig',
-        ['stages'=>$stage]);
+        ['entreprise'=>$entreprise]);
 
     }
-    public function formation($id)
+    public function formation(Formation $formation)
     {
-        $repoFormation = $this->getDoctrine()->getRepository(Formation::class);
-        $formation = $repoFormation->find($id);
+
         return $this->render('pro_stages/formation.html.twig',
         ['formation'=>$formation]);
 
